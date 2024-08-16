@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/939ea1450f.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+    <style>
+        /* Skill marquee styling */
+      /* Skill marquee styling */
+.skills-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 0;
+}
+
+.skills-marquee {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    animation-play-state: running; /* Ensures animation is playing initially */
+}
+
+.skills-wrapper:hover .skills-marquee {
+    animation-play-state: paused; /* Pauses animation on hover */
+}
+
+/* Keyframe animation for scrolling */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.skills-marquee div {
+    display: inline-block;
+    margin: 0 40px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.skill-icon {
+    font-size: 4rem;
+    transition: transform 0.3s;
+}
+
+.skill-icon:hover {
+    transform: scale(1.2);
+}
+
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Header Section -->
+
+<!-- Header Section -->
+<header class="min-h-screen bg-cover bg-center relative" style="background-image: url('https://w0.peakpx.com/wallpaper/469/148/HD-wallpaper-fullstack-development-nodejs-programmer-technology.jpg');">
+  <div class="container mx-auto px-6 py-16 flex flex-col justify-center items-center text-center relative z-10">
+     <!-- Navigation -->
+     <nav class="w-full flex justify-between items-center text-white">
+        <!-- Logo -->
+        <img src="" alt="" class="">
+        
+        <!-- Desktop Menu -->
+        <ul id="desktop-menu" class="hidden md:flex space-x-6">
+           <li><a href="#header" class="hover:text-teal-400 transition">Home</a></li>
+           <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+           <li><a href="#timeline" class="hover:text-teal-400 transition">My Timeline</a></li>
+           <li><a href="#skills" class="hover:text-teal-400 transition">Skills</a></li>
+           <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+           <li><a href="#publications" class="hover:text-teal-400 transition">Paper Publication</a></li>
+           <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+           <li><a href="/assets/SMS ARBAAZ RESUME.pdf" download class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg">Download CV</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-2xl focus:outline-none z-50">
+           <i class="fas fa-bars"></i>
+        </button>
+     </nav>
+     
+     <!-- Mobile Menu (Initially hidden) -->
+     <ul id="mobile-menu" class="hidden flex-col space-y-4 mt-4 text-white text-center bg-black bg-opacity-75 p-4 rounded-md md:hidden">
+        <li><a href="#header" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-teal-400 transition">About</a></li>
+        <li><a href="#timeline" class="hover:text-teal-400 transition">My Timeline</a></li>
+        <li><a href="#skills" class="hover:text-teal-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+        <li><a href="#publications" class="hover:text-teal-400 transition">Paper Publication</a></li>
+        <li><a href="#contact" class="hover:text-teal-400 transition">Contact</a></li>
+        <li><a href="/assets/SMS ARBAAZ RESUME.pdf" download class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg">Download CV</a></li>
+     </ul>
+  </div>
+  <div class="absolute inset-0 bg-black opacity-20 z-0"></div>
+
+    <div class="mt-20 text-center text-white animate__animated animate__fadeInUp">
+      <p class="text-xl font-light tracking-wide animate__animated animate__fadeIn animate__delay-1s">Full Stack Web/App Developer</p>
+      <h1 class="text-6xl font-bold mt-6 animate__animated animate__fadeInDown animate__delay-2s tracking-widest leading-tight">
+        HI, I'm <span class="text-teal-400">SMS Arbaaz</span>
+      </h1>
+      <p class="mt-4 text-lg font-light animate__animated animate__fadeIn animate__delay-3s">Let's build something amazing together!</p>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="absolute bottom-6 flex space-x-4 text-white z-20">
+      <a href="mailto:arbaazsms04@gmail.com" class="text-xl hover:text-teal-400 transition duration-300" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/mohamed-arbaaz-4a8847202/" class="text-xl hover:text-teal-400 transition duration-300" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/Adribv" class="text-xl hover:text-teal-400 transition duration-300" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://wa.me/+918754323357" class="text-xl hover:text-teal-400 transition duration-300" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Add an overlay for a modern look -->
+  
+</header>
+
+
+<!-- About Section -->
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 lg:px-12">
+    <h2 class="text-4xl font-bold text-center mb-10 tracking-wide text-teal-400">About Me</h2>
+    <div class="flex flex-col lg:flex-row items-center">
+      
+      <!-- Image (optional, you can add your photo or an avatar) -->
+      <div class="w-full lg:w-1/4 mb-8 lg:mb-0">
+        <img src="assets/me.jpeg" alt="Profile Picture" class="rounded-full mx-auto shadow-lg hover:scale-105 transition-transform">
+      </div>
+
+      <!-- About Me Text -->
+      <div class="lg:w-2/3 lg:ml-12">
+        <p class="text-lg leading-relaxed mb-6 text-justify text-gray-300">
+          Hi, I am <span class="font-bold text-teal-400">Arbaaz</span>, currently pursuing a B.Tech in Computer Science and Engineering at <span class="font-bold text-teal-400">SRM Institute of Science and Technology</span>. 
+          My passion lies in software development, with proficiency in languages such as <span class="text-yellow-400 font-semibold">Python</span>, 
+          <span class="text-orange-500 font-semibold">Java</span>, <span class="text-gray-400 font-semibold">C++</span>, and frameworks like 
+          <span class="text-red-700 font-semibold">Angular</span> and <span class="text-teal-400 font-semibold">React</span>. 
+          I've interned at <span class="font-bold text-teal-400">RentCart</span> and <span class="font-bold text-teal-400">Nissan</span>, where I honed my skills in web and software development.
+        </p>
+
+        <p class="text-lg leading-relaxed text-gray-300 mb-10 text-justify">
+          I am eager to deepen my expertise in UX/UI and product development while contributing to dynamic teams. I believe in continuous learning and improving my skill set to meet new challenges.
+        </p>
+
+        <!-- Skills Summary -->
+        
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Timeline Section -->
+<section id="timeline" class="py-16 bg-gray-900 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-semibold text-center mb-12">My Timeline</h2>
+    <div class="flex flex-wrap justify-center">
+      <!-- Education Timeline -->
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <h3 class="text-3xl font-semibold mb-6 flex items-center">
+          <i class="fas fa-graduation-cap text-teal-400 mr-3"></i> Education
+        </h3>
+        <div class="relative border-l-4 border-teal-400">
+          <div class="absolute left-[-10px] top-0 w-4 h-4 bg-teal-400 rounded-full"></div>
+          <!-- Education Item -->
+          <div class="mb-6 pl-6">
+            <h4 class="text-xl font-semibold mb-2">Bachelor's Degree</h4>
+            <p class="text-gray-300">SRM University- Computer Science Engineering</p>
+            <p class="text-gray-500 text-sm">2022 - 2026</p>
+            <p class="text-gray-500 text-sm">Cgpa - 8.4(Till 4th Sem)</p>
+          </div>
+          <div class="mb-6 pl-6">
+            <h4 class="text-xl font-semibold mb-2">Higher Secondery</h4>
+            <p class="text-gray-300">Doveton Group of Schools </p>
+            <p class="text-gray-500 text-sm">2021 - 2022</p>
+            <p class="text-gray-500 text-sm">Percentage - 82%</p>
+          </div>
+          <!-- Additional Education Items Here -->
+        </div>
+      </div>
+
+      <!-- Internship Timeline -->
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <h3 class="text-3xl font-semibold mb-6 flex items-center">
+          <i class="fas fa-briefcase text-teal-400 mr-3"></i> Experience
+        </h3>
+        <div class="relative border-l-4 border-teal-400">
+          <div class="absolute left-[-10px] top-0 w-4 h-4 bg-teal-400 rounded-full"></div>
+          <!-- Internship Item -->
+          <div class="mb-6 pl-6">
+            <h4 class="text-xl font-semibold mb-2">Development Team Member</h4>
+            <p class="text-gray-300">Codechef SRM RMP</p>
+            <p class="text-gray-500 text-sm"> Oct 2022 - May 2024</p>
+          </div>
+          <div class="mb-6 pl-6">
+            <h4 class="text-xl font-semibold mb-2">Web Developer Intern</h4>
+            <p class="text-gray-300">RentCart</p>
+            <p class="text-gray-500 text-sm">Mar 2023 - Sept 2023</p>
+          </div>
+          <div class="mb-6 pl-6">
+            <h4 class="text-xl font-semibold mb-2">Software Developer Intern</h4>
+            <p class="text-gray-300">Nissan Automobile</p>
+            <p class="text-gray-500 text-sm">Jul 2024 - Presnet</p>
+          </div>
+          <!-- Additional Internship Items Here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="skills">
+    <div class="mt-10">
+      <h3 class="text-2xl font-semibold mb-6 text-center">Skills</h3>
+
+      
+      <!-- Skills Scrolling Section -->
+      <div class="skills-wrapper">
+        <div class="skills-marquee">
+          <!-- Languages Icons -->
+          <div><i class="fab fa-js skill-icon text-yellow-400"></i><p>Javascript</p></div>
+          <div><i class="fab fa-python skill-icon text-blue-400"></i><p>Python</p></div>
+          <div><i class="fas fa-code skill-icon text-gray-400"></i><p>C++</p></div>
+          <div><i class="fas fa-database skill-icon text-teal-400"></i><p>SQL</p></div>
+          <div><i class="fab fa-java skill-icon text-orange-500"></i><p>Java</p></div>
+          <div><i class="fab fa-html5 skill-icon text-red-500"></i><p>HTML</p></div>
+          <div><i class="fab fa-php skill-icon text-indigo-600"></i><p>PHP</p></div>
+
+          <!-- Frameworks Icons -->
+          <div><i class="fab fa-node skill-icon text-green-500"></i><p>Node.js</p></div>
+          <div><i class="fab fa-angular skill-icon text-red-700"></i><p>Angular</p></div>
+          <div><i class="fab fa-react skill-icon text-teal-400"></i><p>React</p></div>
+          <div><i class="fab fa-js skill-icon text-blue-500"></i><p>Express.js</p></div>
+          <div><i class="fas fa-leaf skill-icon text-green-600"></i><p>MongoDB</p></div>
+          <div><i class="fab fa-flutter skill-icon text-cyan-400"></i><p>Flutter</p></div>
+          <div><i class="fas fa-atom skill-icon text-purple-600"></i><p>Truffle</p></div>
+          <div><i class="fas fa-fire skill-icon text-orange-500"></i><p>Firebase</p></div>
+          <div><i class="fas fa-leaf skill-icon text-green-500"></i><p>SpringBoot</p></div>
+          <div><i class="fas fa-database skill-icon text-orange-600"></i><p>Oracle</p></div>
+          <div><i class="fas fa-flask skill-icon text-gray-300"></i><p>Flask</p></div>
+
+          <!-- Tools Icons -->
+          <div><i class="fab fa-git skill-icon text-orange-500"></i><p>GIT</p></div>
+          <div><i class="fab fa-github skill-icon text-gray-200"></i><p>GitHub</p></div>
+          <div><i class="fas fa-vial skill-icon text-teal-400"></i><p>Postman</p></div>
+          <div><i class="fas fa-code skill-icon text-blue-500"></i><p>VS Code</p></div>
+          <div><i class="fas fa-database skill-icon text-orange-600"></i><p>MySQL</p></div>
+          <div><i class="fab fa-android skill-icon text-green-500"></i><p>Android Studio</p></div>
+
+          <!-- Platforms Icons -->
+          <div><i class="fab fa-aws skill-icon text-orange-500"></i><p>AWS</p></div>
+          <div><i class="fas fa-globe skill-icon text-gray-300"></i><p>Web</p></div>
+          <div><i class="fas fa-desktop skill-icon text-blue-500"></i><p>Windows</p></div>
+          <div><i class="fas fa-link skill-icon text-gray-400"></i><p>Etherscan</p></div>
+          <div><i class="fas fa-wallet skill-icon text-blue-400"></i><p>Metamask</p></div>
+
+          <!-- Soft Skills Icons -->
+          <div><i class="fas fa-users skill-icon text-teal-400"></i><p>Leadership</p></div>
+          <div><i class="fas fa-brain skill-icon text-yellow-500"></i><p>Problem-solving</p></div>
+          <div><i class="fas fa-handshake skill-icon text-purple-400"></i><p>Adaptability</p></div>
+          <div><i class="fas fa-graduation-cap skill-icon text-orange-500"></i><p>Continuous Learning</p></div>
+          <div><i class="fas fa-clock skill-icon text-teal-400"></i><p>Time Management</p></div>
+
+          <!-- Duplicate for seamless scroll -->
+          <div><i class="fab fa-js skill-icon text-yellow-400"></i><p>Javascript</p></div>
+          <div><i class="fab fa-python skill-icon text-blue-400"></i><p>Python</p></div>
+          <div><i class="fas fa-code skill-icon text-gray-400"></i><p>C++</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+<section id="projects" class="py-16 bg-gray-800">
+  <div class="container">
+    <h1 class="sub-title text-center text-4xl font-semibold text-teal-400 mb-10">My Projects</h1>
+    
+    <div class="work-list">
+        
+      <div class="work">
+        <img src="assets/PEPPER SPARY.jpeg" alt="Smart Pepper Spray">
+        <div class="layer">
+          <h3>Smart Pepper Spray</h3>
+          <p>A Smart Pepper Spray Which Takes Pictures Of Attacker And Sends Location To Emergency Contacts</p>
+          <a href="https://github.com/Adribv/SMART-DEFENDER" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/cr.png" alt="Course Recommendation System">
+        <div class="layer">
+          <h3>Course Recommendation System</h3>
+          <p>A Course Recommendation System That Guides The path of an individual based on the skills and intrests <br>Built using ML , React , Python , Firebase  </p>
+          <a href="https://github.com/Adribv/Course-Recommender-App" class="btn btn-primary">
+            <i class="fa-brands fa-git"></i>
+          </a> <a href="https://course-recommender-app-1-atfu.onrender.com/" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/BT ROBO.jpeg" alt="Football Robot">
+        <div class="layer">
+          <h3>Football Robot</h3>
+          <p>A Bluetooth Controlled Robot To Play Football</p>
+          <a href="https://github.com/Adribv/BT-ROBOT" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/Pax (2).jpeg" alt="PAX - Mental Health Wellbeing App">
+        <div class="layer">
+          <h3>PAX - Mental Health Wellbeing App</h3>
+          <p>PAX A Mental Health Wellbeing App That Monitors And Helps Suggesting Meditation And Mental Health Care <br>
+          Built Using Flutter , NodeJS, Firebase</p>
+          <a href="https://github.com/Adribv/main-pax/tree/main/untitled3" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="assets/VIBESYNC.png" alt="VibeSync - Emotion Based Music Player">
+        <div class="layer">
+          <h3>VibeSync - Emotion Based Music Player</h3>
+          <p>A Desktop Application Which Generates A YT Playlist Based On Facial Recognition Built Using ML, AI, And Python.</p>
+          <a href="https://github.com/Adribv/emotion-based-music-player" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="work">
+        <img src="assets/POOLR.jpeg" alt="PoolR - A Ride Sharing App">
+        <div class="layer">
+          <h3>PoolR - A Ride Sharing App</h3>
+          <p>A Ride Sharing App Built Using React Native And Firebase.</p>
+          <a href="https://github.com/Adribv/GoConnect" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-10">
+        <a href="https://github.com/Adribv?tab=repositories" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg inline-block transition duration-300">More Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Paper Publication Section -->
+<section id="publications" class="py-16 bg-gray-800 text-center">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-semibold text-teal-400 mb-8">Paper Publication</h2>
+    <div class="max-w-4xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-semibold text-white mb-4">VibeSync - Emotion Based Music Player</h3>
+      <p class="text-lg text-gray-400 mb-6">
+        <a href="https://ijercse.com/emotion-based-music-player.php" target="_blank" class="text-teal-500 hover:text-teal-300 transition duration-300 underline">
+          IJERCSE Volume 10, Issue 12, December 2023
+        </a>
+      </p>
+      <p class="text-lg text-gray-400 mb-6">
+        Author: <span class="text-white font-medium">SMS Arbaaz</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-semibold mb-6">Contact Me</h2>
+    <form action="https://formsubmit.co/arbaazsms04@gmail.com" method="POST" class="space-y-4 max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <!-- Name Field -->
+      <input type="text" name="name" placeholder="Name" class="w-full px-4 py-2 text-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-teal-500 transition duration-300" required>
+      
+      <!-- Email Field -->
+      <input type="email" name="email" placeholder="Email" class="w-full px-4 py-2 text-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-teal-500 transition duration-300" required>
+      
+      <!-- Message Field -->
+      <textarea name="message" placeholder="Message" class="w-full px-4 py-2 text-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-teal-500 transition duration-300" required></textarea>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg focus:outline-none transition duration-300">Send</button>
+  </form>
+  
+    <div class="mt-10">
+      <a href="assets/SMS ARBAAZ RESUME.pdf" download class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg inline-block transition duration-300">Download My CV</a>
+    </div>
+   
+    <div class="mt-10">
+      <h3 class="text-2xl font-semibold mb-4">Follow Me</h3>
+      <div class="flex justify-center space-x-6">
+        <a href="mailto:arbaazsms04@gmail.com" class="text-white text-3xl hover:text-teal-400 transition duration-300"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/mohamed-arbaaz-4a8847202/" target="_blank" class="text-white text-3xl hover:text-teal-400 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Adribv" target="_blank" class="text-white text-3xl hover:text-teal-400 transition duration-300"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/+918754323357" target="_blank" class="text-white text-3xl hover:text-teal-400 transition duration-300"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="py-6 bg-gray-800 text-center text-gray-400">
+  <p>&copy; 2024 Arbaaz. All rights reserved.</p>
+  
+</footer>
+
+<!-- Font Awesome CDN for icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha512-I6BwdM8Oxl9iBqSTJXcK+HLUg5e5H8pIev5Y3uRa6ldXzBUpyFGs4Y6ybJ7q2PUtHxG1abRRQOZh8e6mqaA8oQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+     const mobileMenuButton = document.getElementById("mobile-menu-button");
+     const mobileMenu = document.getElementById("mobile-menu");
+
+     mobileMenuButton.addEventListener("click", function() {
+        mobileMenu.classList.toggle("hidden");
+     });
+  });
+</script>
+</body>
+</html>
