@@ -356,6 +356,27 @@ form input, form textarea {
     color: #63cdda;
     text-decoration: none;
   }
+
+  /* styles.css */
+#certificates {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  #certificates h2 {
+    color: #ffffff;
+  }
+  
+  #certificates p {
+    font-size: 1.25rem;
+    color: #9ca3af; /* Tailwind gray-400 */
+  }
+  
+  #certificates a {
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
   
 /* Media Queries */
 @media only screen and (max-width: 600px) {
